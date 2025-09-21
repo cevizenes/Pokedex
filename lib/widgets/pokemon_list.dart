@@ -5,7 +5,8 @@ import 'package:pokedex/services/pokedex_api.dart';
 import 'package:pokedex/widgets/pokemon_item.dart';
 
 class PokemonList extends StatefulWidget {
-  const PokemonList({super.key});
+  // ignore: prefer_const_constructors_in_immutables
+  PokemonList({super.key});
 
   @override
   State<PokemonList> createState() => _PokemonListState();

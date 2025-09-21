@@ -14,15 +14,31 @@ class UIHelper {
     }
   }
 
+  static TextStyle getTitleTextStyle() {
+    return TextStyle(
+      color: Colors.white,
+      fontSize: _calculateFontSize(48),
+      fontWeight: FontWeight.bold,
+    );
+  }
+
   static TextStyle getPokemonNameTextStyle() {
     return TextStyle(
       color: Colors.white,
-      fontSize: 30,
+      fontSize: _calculateFontSize(30),
       fontWeight: FontWeight.bold,
     );
   }
 
   static TextStyle getTypeChipTextStyle() {
-    return TextStyle(color: Colors.white, fontSize: 15);
+    return TextStyle(color: Colors.white, fontSize: _calculateFontSize(15));
+  }
+
+  static _calculateFontSize(int size) {
+    if (ScreenUtil().orientation == Orientation.portrait) {
+      return size.sp;
+    } else {
+      return (size * 0.5).sp;
+    }
   }
 }

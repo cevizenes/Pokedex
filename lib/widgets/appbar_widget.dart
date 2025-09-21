@@ -3,7 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pokedex/constants/ui_helper.dart';
 
 class AppBarWidget extends StatelessWidget {
-  const AppBarWidget({super.key});
+  // ignore: prefer_const_constructors_in_immutables
+  AppBarWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,14 +18,7 @@ class AppBarWidget extends StatelessWidget {
             padding: UIHelper.getDefaultPadding(),
             child: Align(
               alignment: Alignment.centerLeft,
-              child: Text(
-                title,
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 40,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
+              child: Text(title, style: UIHelper.getTitleTextStyle()),
             ),
           ),
           Align(

@@ -14,19 +14,24 @@ class PokemonItem extends StatelessWidget {
       elevation: 3,
       shadowColor: Colors.white,
       color: Colors.red.shade200,
-      child: Column(
-        children: [
-          Text(pokemon.name!, style: UIHelper.getPokemonNameTextStyle()),
-          Chip(
-            label: Text(
-              pokemon.type![0],
-              style: UIHelper.getTypeChipTextStyle(),
+      child: Padding(
+        padding: UIHelper.getDefaultPadding(),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(pokemon.name!, style: UIHelper.getPokemonNameTextStyle()),
+            Chip(
+              label: Text(
+                pokemon.type![0],
+                style: UIHelper.getTypeChipTextStyle(),
+              ),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(24.w),
+              ),
             ),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(24.w),
-            ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
