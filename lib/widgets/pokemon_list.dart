@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pokedex/model/pokemon_model.dart';
 import 'package:pokedex/services/pokedex_api.dart';
+import 'package:pokedex/widgets/pokemon_item.dart';
 
 class PokemonList extends StatefulWidget {
   const PokemonList({super.key});
@@ -25,10 +27,15 @@ class _PokemonListState extends State<PokemonList> {
       builder: (context, snapshot) {
         if (snapshot.hasData) {
           List<PokemonModel> pokemonList = snapshot.data!;
-          return ListView.builder(
+          return GridView.builder(
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: ScreenUtil().orientation == Orientation.portrait
+                  ? 2
+                  : 3,
+            ),
             itemCount: pokemonList.length,
             itemBuilder: (context, index) {
-              return ListTile(title: Text(pokemonList[index].name!));
+              return PokemonItem(pokemon: pokemonList[index]);
             },
           );
         } else if (snapshot.hasError) {

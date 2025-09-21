@@ -13,4 +13,16 @@ class UIHelper {
       return EdgeInsets.all(8.w);
     }
   }
+
+  static TextStyle getPokemonNameTextStyle() {
+    return TextStyle(
+      color: Colors.white,
+      fontSize: 30,
+      fontWeight: FontWeight.bold,
+    );
+  }
+
+  static TextStyle getTypeChipTextStyle() {
+    return TextStyle(color: Colors.white, fontSize: 15);
+  }
 }
