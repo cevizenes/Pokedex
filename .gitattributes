@@ -1,0 +1,10 @@
+# Flutter generated files
+android/* linguist-generated=true
+ios/* linguist-generated=true  
+linux/* linguist-generated=true
+macos/* linguist-generated=true
+windows/* linguist-generated=true
+web/* linguist-generated=true
+
+# Keep only Dart as the main language
+*.dart linguist-detectable=true

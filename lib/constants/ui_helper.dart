@@ -41,4 +41,35 @@ class UIHelper {
       return (size * 0.5).sp;
     }
   }
+
+  static double calculatePokemonImageSize() {
+    if (ScreenUtil().orientation == Orientation.portrait) {
+      return 0.2.sw;
+    } else {
+      return 0.3.sh;
+    }
+  }
+
+  static final Map<String, Color> typeColors = {
+    'Normal': Colors.grey,
+    'Fire': Colors.red,
+    'Water': Colors.blue,
+    'Grass': Colors.green,
+    'Electric': Colors.yellow,
+    'Ghost': Colors.deepPurple,
+    'Fighting': Colors.red,
+    'Poison': Colors.purple,
+    'Ground': Colors.brown,
+    'Rock': Colors.grey,
+    'Psychic': Colors.pink,
+    'Bug': Colors.green,
+  };
+
+  static Color getTypeColor(String type) {
+    if (typeColors.containsKey(type)) {
+      return typeColors[type]!;
+    } else {
+      return Colors.grey;
+    }
+  }
 }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pokedex/constants/ui_helper.dart';
 import 'package:pokedex/model/pokemon_model.dart';
+import 'package:pokedex/widgets/poke_image.dart';
 
 class PokemonItem extends StatelessWidget {
   final PokemonModel pokemon;
@@ -13,7 +14,7 @@ class PokemonItem extends StatelessWidget {
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16.w)),
       elevation: 3,
       shadowColor: Colors.white,
-      color: Colors.red.shade200,
+      color: UIHelper.getTypeColor(pokemon.type![0]),
       child: Padding(
         padding: UIHelper.getDefaultPadding(),
         child: Column(
@@ -30,6 +31,7 @@ class PokemonItem extends StatelessWidget {
                 borderRadius: BorderRadius.circular(24.w),
               ),
             ),
+            Expanded(child: PokemonImage(pokemon: pokemon)),
           ],
         ),
       ),
