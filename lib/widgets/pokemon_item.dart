@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pokedex/constants/ui_helper.dart';
 import 'package:pokedex/model/pokemon_model.dart';
+import 'package:pokedex/pages/detail_page.dart';
 import 'package:pokedex/widgets/poke_image.dart';
 
 class PokemonItem extends StatelessWidget {
@@ -10,29 +11,39 @@ class PokemonItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16.w)),
-      elevation: 3,
-      shadowColor: Colors.white,
-      color: UIHelper.getTypeColor(pokemon.type![0]),
-      child: Padding(
-        padding: UIHelper.getDefaultPadding(),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(pokemon.name!, style: UIHelper.getPokemonNameTextStyle()),
-            Chip(
-              label: Text(
-                pokemon.type![0],
-                style: UIHelper.getTypeChipTextStyle(),
+    return InkWell(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => DetailPage(pokemon: pokemon)),
+        );
+      },
+      child: Card(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(16.w),
+        ),
+        elevation: 3,
+        shadowColor: Colors.white,
+        color: UIHelper.getTypeColor(pokemon.type![0]),
+        child: Padding(
+          padding: UIHelper.getDefaultPadding(),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(pokemon.name!, style: UIHelper.getPokemonNameTextStyle()),
+              Chip(
+                label: Text(
+                  pokemon.type![0],
+                  style: UIHelper.getTypeChipTextStyle(),
+                ),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(24.w),
+                ),
               ),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(24.w),
-              ),
-            ),
-            Expanded(child: PokemonImage(pokemon: pokemon)),
-          ],
+              Expanded(child: PokemonImage(pokemon: pokemon)),
+            ],
+          ),
         ),
       ),
     );

@@ -25,7 +25,7 @@ class UIHelper {
   static TextStyle getPokemonNameTextStyle() {
     return TextStyle(
       color: Colors.white,
-      fontSize: _calculateFontSize(30),
+      fontSize: _calculateFontSize(28),
       fontWeight: FontWeight.bold,
     );
   }
