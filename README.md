@@ -46,7 +46,7 @@ A Flutter application that displays Pokemon information using the PokeAPI. Brows
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/yourusername/pokedex.git
+git clone https://github.com/cevizenes/Pokedex.git
 cd pokedex
 ```
 
