@@ -72,4 +72,16 @@ class UIHelper {
       return Colors.grey;
     }
   }
+
+  static TextStyle getPokemonDetailTextStyle() {
+    return TextStyle(color: Colors.black, fontSize: _calculateFontSize(15));
+  }
+
+  static TextStyle getPokemonDetailLabelTextStyle() {
+    return TextStyle(
+      color: Colors.black,
+      fontSize: _calculateFontSize(20),
+      fontWeight: FontWeight.bold,
+    );
+  }
 }
