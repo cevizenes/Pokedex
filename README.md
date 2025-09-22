@@ -4,11 +4,13 @@ A Flutter application that displays Pokemon information using the PokeAPI. Brows
 
 ## Screenshots
 
+### Portrait Mode
 <div align="center">
   <img src="assets/screenshots/home_screen.png" width="250" alt="Home Screen">
   <img src="assets/screenshots/detail_screen.png" width="250" alt="Detail Screen">
 </div>
 
+### Landscape Mode
 <div align="center">
   <img src="assets/screenshots/landscape_home_screen.png" width="400" alt="Landscape Home Screen">
   <img src="assets/screenshots/landscape_detail_screen.png" width="400" alt="Landscape Detail Screen">
