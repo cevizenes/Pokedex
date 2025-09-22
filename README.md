@@ -7,13 +7,16 @@ A Flutter application that displays Pokemon information using the PokeAPI. Brows
 <div align="center">
   <img src="assets/screenshots/home_screen.png" width="250" alt="Home Screen">
   <img src="assets/screenshots/detail_screen.png" width="250" alt="Detail Screen">
-  <img src="assets/screenshots/pokemon_list.png" width="250" alt="Pokemon List">
+</div>
+
+<div align="center">
+  <img src="assets/screenshots/landscape_home_screen.png" width="400" alt="Landscape Home Screen">
+  <img src="assets/screenshots/landscape_detail_screen.png" width="400" alt="Landscape Detail Screen">
 </div>
 
 ## Features
 
 - 📱 **Pokemon List**: Browse through all Pokemon with infinite scroll
-- 🔍 **Search**: Find Pokemon by name or number
 - 📊 **Detailed Info**: View Pokemon stats, types, abilities, and evolution chain
 - 🎨 **Beautiful UI**: Pokemon-themed design with dynamic colors
 - 📱 **Responsive**: Works on both phones and tablets
@@ -24,7 +27,6 @@ A Flutter application that displays Pokemon information using the PokeAPI. Brows
 
 - **Flutter** - Cross-platform mobile framework
 - **Dart** - Programming language
-- **PokeAPI** - RESTful Pokemon data API
 - **HTTP** - For API requests
 - **Cached Network Image** - Image caching
 - **Provider** - State management
@@ -35,7 +37,7 @@ A Flutter application that displays Pokemon information using the PokeAPI. Brows
 
 - Flutter SDK (>=3.0.0)
 - Dart SDK (>=3.0.0)
-- Android Studio / VS Code
+- Android Studio / VS Code / Cursor
 - iOS Simulator / Android Emulator
 
 ### Installation
@@ -67,5 +69,3 @@ flutter build apk --release
 ```bash
 flutter build ios --release
 ```
-
-## Project Structure
